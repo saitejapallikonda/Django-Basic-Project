@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Projects List</h1>
+  {% if project_list %}
+    <ul>
+      {% for project in project_list %}
+      <li>
+        <a href="{{ project.get_absolute_url }}">{{ project.projectTitle }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Currently there are no projects.</p>
+  {% endif %}
+{% endblock %}

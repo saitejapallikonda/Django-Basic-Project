@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Home Page</h1>
+  <p>
+    Welcome to XYZ Company!
+  </p>
+  <p>
+    The Company has the following records:
+  </p>
+  <ul>
+    <li><strong>Number of Employees:</strong> {{ num_employees }}</li>
+    <ul>
+        <li>Number of General Employees: {{ num_general_employees}}</li>
+        <li>Number of Managers: {{ num_managers}}</li>
+        <li>Number of General Employees: {{ num_HR}}</li>
+    </ul>
+    <br>
+    <li><strong>Number of Projects:</strong> {{ num_projects }}</li>
+  </ul>
+{% endblock %}

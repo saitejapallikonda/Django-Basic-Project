@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Employees List</h1>
+  {% if employeeinfo_list %}
+    <ul>
+      {% for emp in employeeinfo_list %}
+      <li>
+        <a href="{{ emp.get_absolute_url }}">{{ emp.employeeName }}</a>, {{emp.get_employeeRole_display}}
+      </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}
+{% endblock %}
